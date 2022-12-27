@@ -143,9 +143,8 @@ export const CardOffer = styled.div`
             font-size: 1em;
   }
       }
-          & button {
+          & a {
             width: 8em;
-            margin-top: 1em;
             background-color: white;
             color: red;
             height: 3em;
@@ -157,9 +156,12 @@ export const CardOffer = styled.div`
             letter-spacing: 1px;
             font-weight: 800;
             margin: auto;
+            text-align: center;
+            padding-top: 0.6em;
+            text-decoration: none;
   } 
 
-  & button:hover {
+  & a:hover {
         background-color: #fa2323;
         color: black;
         transition: 0.6s;

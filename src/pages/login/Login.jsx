@@ -88,7 +88,7 @@ export default function Login() {
                     Monthly price
                   </li>
               </ul>
-              <p>$4.99</p>
+              <p>£4.99</p>
             </MonthlyContainer>
             <MonthlyContainer>
             <ul>
@@ -106,7 +106,7 @@ export default function Login() {
               </ul>
               <p>NO</p>
             </MonthlyContainer>
-              <button onClick={paymentBtn}>Subscribe</button>
+              <a href='https://buy.stripe.com/test_14k0117bRdgLbcIfZ0'>Subscribe</a>
         </CardOffer>
       </CardOffersContainer>
       <CardOffersContainer>
@@ -118,7 +118,7 @@ export default function Login() {
                     Monthly price
                   </li>
               </ul>
-              <p>$10.99</p>
+              <p>£10.99</p>
             </MonthlyContainer>
             <MonthlyContainer>
             <ul>
@@ -136,7 +136,7 @@ export default function Login() {
               </ul>
               <p>YES</p>
             </MonthlyContainer>
-            <button onClick={paymentBtn}>Subscribe</button>
+            <a href="https://buy.stripe.com/test_cN2eVV67N7WrdkQ6oo">Subscribe</a>
         </CardOffer>
       </CardOffersContainer>
       </CardOffersMainContainer>
