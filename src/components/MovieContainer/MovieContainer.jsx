@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import YouTube from 'react-youtube'
-import { MainContainerMovie, DescriptionContainer } from './MovieContainer.style'
+import { MainContainerMovie, DescriptionContainer,MovieCards } from './MovieContainer.style'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import likeIcon from "../../assets/like.png"
@@ -67,9 +67,7 @@ useEffect(() => {
 
 
   return (
-    <div style={{
-      display: "flex",
-    }}>
+    <MovieCards>
       {movie.filter(movies => movies.key === id).map((movies) => {
 
         return (
@@ -98,6 +96,6 @@ useEffect(() => {
           )
 
       })}
-    </div>
+    </MovieCards>
   )
 }

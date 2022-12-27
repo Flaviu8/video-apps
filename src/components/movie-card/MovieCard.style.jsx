@@ -1,11 +1,29 @@
 import styled from "@emotion/styled"
 
+
+export const MovieCardMainContainer = styled.div`
+            display: flex;
+            flex-wrap: wrap;
+            @media (max-width: 768px) {
+            margin-top: 1em;
+           
+  }
+
+
+`;
+
 export const MovieCardMain = styled.div`
     background-color: white;
     width: 640px;
     height: 500px;
     margin: auto;
     margin-top: 2em;
+    @media (max-width: 768px) {
+  width: 100%;
+  margin: auto;
+  margin-top: 2em;
+  }
+
     & button {
         margin-top:2em;
         margin-left: 2em;
@@ -36,6 +54,16 @@ export const MovieCardContainer = styled.div`
  font-weight: 600;
 
 } 
+
+& img {
+  width: 640px;
+  height: 350px;
+  @media (max-width: 768px) {
+      width: 100%;
+      height: 300px;
+  }
+
+}
    
 `;
 

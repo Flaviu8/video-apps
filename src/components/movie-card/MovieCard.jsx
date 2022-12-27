@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { MovieCardMain, MovieCardContainer } from './MovieCard.style'
+import { MovieCardMain, MovieCardContainer, MovieCardMainContainer } from './MovieCard.style'
 import axios from 'axios'
 import  { useNavigate} from "react-router-dom"
 import SearchBar from '../search-bar/SearchBar'
@@ -37,12 +37,7 @@ export default function MovieCard() {
     <>
     <SearchBar changeValue={handleChange} valueChanged={searchTerm}/>
     
-    <div style={{
-        display: "flex",
-        flexWrap: "wrap",
-        
-  
-    }}>
+    <MovieCardMainContainer>
 
         {movie.filter((movies) => {
           if (searchTerm === "" ) {
@@ -55,7 +50,7 @@ export default function MovieCard() {
                 <MovieCardMain key={movies.id}>
                   
                 <MovieCardContainer>
-                  <img src="https://t4.ftcdn.net/jpg/03/48/81/77/360_F_348817789_25OWzJSmz8pbFOc8HRhxEeMpdYBPeu7X.jpg" width="640" height="350px" alt=""/>
+                  <img src="https://t4.ftcdn.net/jpg/03/48/81/77/360_F_348817789_25OWzJSmz8pbFOc8HRhxEeMpdYBPeu7X.jpg"  alt=""/>
                     <p>{movies.name}</p>
                 </MovieCardContainer>
                 <button onClick={()=>(navigate(`/movie/${movies.key}`))}>Play</button>
@@ -64,7 +59,7 @@ export default function MovieCard() {
         })
         
         }
-    </div>
+    </MovieCardMainContainer>
     </>
   )
 
