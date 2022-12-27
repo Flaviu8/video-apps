@@ -4,8 +4,10 @@ import styled from "@emotion/styled"
 export const MovieCardMainContainer = styled.div`
             display: flex;
             flex-wrap: wrap;
+            margin-left: 1em;
             @media (max-width: 768px) {
             margin-top: 1em;
+            margin: auto;
            
   }
 
