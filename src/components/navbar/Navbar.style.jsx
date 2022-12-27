@@ -9,6 +9,7 @@ export const SignIn = styled.div`
     @media (max-width: 768px) {
            padding-left: 2em;
            margin-top: 1em;
+           border-radius: 1em;
   }
     
         & button {

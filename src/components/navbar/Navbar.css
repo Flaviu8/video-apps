@@ -13,9 +13,10 @@
 
 .navbar-toggler-icon {
   background-color: rgb(255, 255, 255)!important;
-  width: 0.8em;
-  height: 0.8em;
-  box-shadow: 1,0,1,2 rgba(0, 0, 1, );
+  width: 0.6em;
+  height: 0.6em;
+  box-shadow: 1,0,1,2 rgb(107, 107, 228);
+  border-radius: 0.1em;
 }
 
 
