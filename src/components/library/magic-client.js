@@ -2,8 +2,10 @@ import { Magic } from "magic-sdk";
 
  const createMagic = () => {
 
+    const API_KEY = String(process.env.REACT_APP_MAGIC_API_KEY) 
+
     return ( typeof window !== "undefined" && 
-    new Magic(process.env.REACT_APP_MAGIC_API_KEY) 
+    new Magic (API_KEY) 
     );  // ✨
 };
 
