@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Navbar.css"
 import { SignIn } from './Navbar.style';
 import { useNavigate } from 'react-router-dom';
@@ -18,15 +19,18 @@ function NavigationBar(props) {
 
   return (
     <>
-      <Navbar bg="black" collapseOnSelect expand="lg" variant="dark">
+      <Navbar bg="black" expand="lg">
         <Container>
-          <Navbar.Brand >NETFLIX</Navbar.Brand>
-          <Nav className="me-auto">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/contact">Contact Us</NavLink>
-            <NavLink to="/Prices">Prices</NavLink>
-          </Nav>
-        </Container>
+            <Navbar.Brand className="navbar-brand" to='/'>NETFLIX</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav text-danger" />
+              <Navbar.Collapse id="basic-navbar-nav " >
+                <Nav className="me-auto">
+                    <NavLink className="nav-link active text-danger" aria-current="page" to="/">Home</NavLink>
+                    <NavLink className="nav-link" to="/prices">Prices</NavLink>
+                    <NavLink className="nav-link" to="/contact">Contact Us</NavLink>
+                  </Nav>
+             </Navbar.Collapse>
+          </Container>
         <SignIn>
            <button onClick={logOut}>Sign Out</button>
         </SignIn>
@@ -36,3 +40,7 @@ function NavigationBar(props) {
 }
 
 export default NavigationBar;
+
+
+
+

@@ -11,6 +11,15 @@
 
 }
 
+.navbar-toggler-icon {
+  background-color: rgb(255, 255, 255)!important;
+  width: 0.8em;
+  height: 0.8em;
+  box-shadow: 1,0,1,2 rgba(0, 0, 1, );
+}
+
+
+
 .navbar-nav {
     margin-left: 2em;
     font-size: 1.2em;
@@ -31,4 +40,11 @@
 
 .container  {
     margin-left: 4em;
+}
+
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        margin-left: 0;
+    }
 }

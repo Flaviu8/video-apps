@@ -5,6 +5,11 @@ export const SignIn = styled.div`
     display: flex;
     justify-content: flex-end;
     margin-right: 2em;
+
+    @media (max-width: 768px) {
+           padding-left: 2em;
+           margin-top: 1em;
+  }
     
         & button {
         margin-left: 3em;
@@ -20,18 +25,16 @@ export const SignIn = styled.div`
         letter-spacing: 1px;
         font-weight: 800;
 
+        @media (max-width: 768px) {
+           
+  }
+
     } 
     & button:hover {
         background-color: #fa2323;
         color: black;
         transition: 0.6s;
-    } 
-
-    & button:nth-of-type(2n) {
-        display: none;
-
-    } 
-        
+    }         
 
 `;
 

@@ -110,8 +110,10 @@ export const CardOffersContainer = styled.div`
       margin-bottom: 2em;
 
       @media (max-width: 768px) {
-    width: 80%;
-    height: 325px;
+          width: 80%;
+          height: 325px;
+          
+    
   }
 `;
 

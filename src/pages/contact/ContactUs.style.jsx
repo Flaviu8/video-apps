@@ -3,8 +3,19 @@ import styled from "@emotion/styled"
 export const ContactUsContainer = styled.div` 
         background-color: white;
         padding-top: 1em;
+        padding-bottom: 1em;
      
 `;
+
+
+export const ContactUsMainContainer = styled.div` 
+      margin-left: 10em;
+        
+        @media (max-width: 768px) {
+            margin-left: 0;
+  }
+  `;
+       
 
 
 export const BackHome = styled.div` 
@@ -55,10 +66,12 @@ export const SearchContainer = styled.div`
         height: 3.1em;
         width: 70%;
         margin-top: 1.5em;
+        
         @media (max-width: 768px) {
-            width: 250px;
+            width: 350px;
             display: flex;
             justify-content: flex-start;
+            margin-bottom: 2em;
             
     
   }
@@ -78,8 +91,8 @@ export const SearchContainer = styled.div`
          width: 80%;
 
          @media (max-width: 768px) {
-  width: 60%;
-  display: flex;
+                width: 60%;
+                display: flex;
   }
 
          
@@ -139,7 +152,7 @@ export const LeftContentContainer = styled.div`
     width: 900px;
     font-weight: 100;
     @media (max-width: 768px) {
-  width: 150%;
+         width: 150%;
   }
 
    }
@@ -189,6 +202,10 @@ export const EmptyLine = styled.div`
     width: 95%;
     background: black;
     margin-top: 2em;
+
+    @media (max-width: 768px) {
+         width: 120%;
+  }
 
 `;
 

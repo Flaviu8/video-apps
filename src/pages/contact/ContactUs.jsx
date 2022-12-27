@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ContactUsContainer, BackHome, ContentContainer, CallBox,LiveChatBox, RightContainer, LeftContentContainer, EmptyLine, SearchContainer, DownloadButton } from './ContactUs.style'
+import { ContactUsContainer, BackHome, ContentContainer, CallBox,LiveChatBox, RightContainer, LeftContentContainer, EmptyLine, SearchContainer, DownloadButton,ContactUsMainContainer } from './ContactUs.style'
 import iconSearch  from "../../assets/search.png"
 import googleIcon from "../../assets/google-play.png"
 import Footer from '../../components/footer/Footer'
@@ -17,7 +17,7 @@ const navigate = useNavigate()
   return (
     <>
       <ContactUsContainer>
-        <div style={{marginLeft: "10em"}}>
+        <ContactUsMainContainer>
           <BackHome>
             <p onClick={backHome}><span>&#8592;</span> Back To Home Page</p>
             <h1>Contact Customer Service</h1>
@@ -70,7 +70,7 @@ const navigate = useNavigate()
                 </SearchContainer>
             </RightContainer>
           </ContentContainer>
-        </div>
+        </ContactUsMainContainer>
       </ContactUsContainer>
       <Footer />
     </>

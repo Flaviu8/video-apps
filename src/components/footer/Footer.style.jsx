@@ -2,11 +2,13 @@ import styled from "@emotion/styled"
 
 
 export const  FooterMain =  styled.div`
+        display: flex;
+        justify-content: center;
     & h6 {
         color: white;
         margin-top: 2em;
         margin-top: 2em;
-        margin-left: 13.5em;
+      
         
         @media (max-width: 768px) {
             margin: auto;
@@ -53,10 +55,10 @@ export const  FooterLinks =  styled.div`
 export const  FooterCopyright =  styled.footer`
         display: flex;
         margin-bottom: 2em;
+        justify-content: center;
     & p {
         color: white;
         margin-top: 2em;
-        margin-left: 14em;
         line-height: 5px;
         
 
