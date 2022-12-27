@@ -12,25 +12,25 @@ export default function Footer() {
             <ul>
                 <li><Link to="/prices">Prices</Link></li>
                 <li><Link to="/contact">Contact Us</Link></li>
-                <li><a href=''>Ways to Watch</a></li>
-                <li><a href=''>Corporate informations</a></li>
-                <li><a href=''>Legal notices</a></li>
+                <li><a href='/'>Ways to Watch</a></li>
+                <li><a href='/'>Corporate informations</a></li>
+                <li><a href='/'>Legal notices</a></li>
             </ul>
             <ul>
-                <li><a href="">Help center</a></li>
-                <li><a href="">Terms of use</a></li>
-                <li><a href="">Jobs</a></li>
+                <li><a href="/">Help center</a></li>
+                <li><a href="/">Terms of use</a></li>
+                <li><a href="/">Jobs</a></li>
             </ul>
             <ul>
-                <li><a href="">Account</a></li>
-                <li><a href="">Privacy</a></li>
-                <li><a href="">Media Centre</a></li>
+                <li><a href="/">Account</a></li>
+                <li><a href="/">Privacy</a></li>
+                <li><a href="/">Media Centre</a></li>
             </ul>
             <ul>
-                <li><a href="">Buy gift cards</a></li>
-                <li><a href="">Privacy</a></li>
-                <li><a href="">Cookie Preferencies</a></li>
-                <li><a href="">Legal Guareantee</a></li>
+                <li><a href="/">Buy gift cards</a></li>
+                <li><a href="/">Privacy</a></li>
+                <li><a href="/">Cookie Preferencies</a></li>
+                <li><a href="/">Legal Guareantee</a></li>
             </ul>
         </FooterLinks>
         <FooterCopyright>
