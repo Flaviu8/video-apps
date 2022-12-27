@@ -14,7 +14,7 @@ export default function MovieContainer() {
   const API_KEY = (process.env.REACT_APP_MOVIE_APP_KEY)
   
   useEffect(()=>{
-    axios.get(`https://api.themoviedb.org/3/movie/157336?api_key=${API_KEY}&append_to_response=videos,images`)
+    axios.get(`https://api.themoviedb.org/3/movie/157336?api_key=7c53f0c0f44c4c0fd2a1494e24a3b86d&append_to_response=videos,images`)
     .then(function (response) {
       // handle success
       setMovie(response.data.videos.results)
