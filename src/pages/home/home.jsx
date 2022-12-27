@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import MovieCard from '../../components/movie-card/MovieCard'
 import Navbar from '../../components/navbar/Navbar'
 import  { magic } from "../../components/library/magic-client";
 import { useNavigate } from 'react-router-dom';
-import Loading from "../../components/loading/loading";
+// import Loading from "../../components/loading/loading";
 
 
 
 
 export default function Home() {
-    const [isLoading, setIsLoading] = useState(false)
+    // const [isLoading, setIsLoading] = useState(false)
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -25,9 +25,9 @@ export default function Home() {
 
     },[navigate])
 
-    const handleComplete = () => {
-      setIsLoading(false)
-  }; 
+  //   const handleComplete = () => {
+  //     setIsLoading(false)
+  // }; 
 
 
 
