@@ -9,20 +9,20 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
   //   const [isLoading, setIsLoading] = useState(false)
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
-    useEffect(() => {
-      async function fetchData () {
-        const isLoggedIn = await magic.user.isLoggedIn()
-        if (isLoggedIn) { 
-          return navigate("/")
-        } else return navigate("/login")
+    // useEffect(() => {
+    //   async function fetchData () {
+    //     const isLoggedIn = await magic.user.isLoggedIn()
+    //     if (isLoggedIn) { 
+    //       return navigate("/")
+    //     } else return navigate("/login")
 
-      }   
-      fetchData()
+    //   }   
+    //   fetchData()
       
 
-    },[navigate])
+    // },[navigate])
 
   //   const handleComplete = () => {
   //     setIsLoading(false)
