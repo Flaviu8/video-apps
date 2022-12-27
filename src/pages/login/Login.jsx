@@ -60,9 +60,9 @@ export default function Login() {
             
     };
 
-    const paymentBtn = () => {
-      navigate("/payment")
-    }
+    // const paymentBtn = () => {
+    //   navigate("/payment")
+    // }
 
 
   return (
