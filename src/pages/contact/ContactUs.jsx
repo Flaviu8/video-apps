@@ -1,6 +1,5 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import Navbar from "../../components/navbar/Navbar"
 import { ContactUsContainer, BackHome, ContentContainer, CallBox,LiveChatBox, RightContainer, LeftContentContainer, EmptyLine, SearchContainer, DownloadButton } from './ContactUs.style'
 import iconSearch  from "../../assets/search.png"
 import googleIcon from "../../assets/google-play.png"
@@ -16,7 +15,6 @@ const navigate = useNavigate()
 
   return (
     <>
-      <Navbar />
       <ContactUsContainer>
         <div style={{marginLeft: "10em"}}>
           <BackHome>
