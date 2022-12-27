@@ -8,7 +8,6 @@ export const LoginContainer = styled.div`
     width: 100%;
     background-position: center;
 
-
 `;
 
 
@@ -103,11 +102,12 @@ export const CardOffersMainContainer = styled.div`
 
 export const CardOffersContainer = styled.div`
       width: 40%;
-      height: 600px;
+      height: 550px;
       background: linear-gradient(#eb1f1fb3, #d33232);
       margin: auto;
       margin-top: 2em;
       border-radius: 3%;
+      margin-bottom: 2em;
 
       @media (max-width: 768px) {
     width: 80%;

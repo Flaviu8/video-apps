@@ -8,6 +8,7 @@ import Payment from "./pages/payment/Payment"
 
 function App() {
   return (
+
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/movie/:id" element={<Movie />} />
@@ -15,6 +16,7 @@ function App() {
             <Route path="/login" element= {<Login />} />
             <Route path="/payment" element={<Payment />} />
         </Routes>
+      
   );
 }
 

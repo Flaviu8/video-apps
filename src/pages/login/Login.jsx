@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { LoginContainer, LoginInput, SignInBtn, MonthlyContainer, CardOffer, CardOffersContainer, CardOffersMainContainer } from './Login.style'
 import { magic } from '../../components/library/magic-client'
 import { useNavigate } from 'react-router-dom';
+import Footer from '../../components/footer/Footer';
 
 
 
@@ -65,6 +66,7 @@ export default function Login() {
 
 
   return (
+    <>
     <LoginContainer>
       <LoginInput>
         <h1>Sign In</h1>
@@ -139,5 +141,7 @@ export default function Login() {
       </CardOffersContainer>
       </CardOffersMainContainer>
     </LoginContainer>
+    <Footer />
+    </>
   )
   }

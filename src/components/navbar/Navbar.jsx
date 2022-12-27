@@ -8,20 +8,12 @@ import { magic } from '../../components/library/magic-client'
 import { NavLink } from 'react-router-dom';
 
 function NavigationBar(props) {
-  const Login = useNavigate()
-
-  const navigateToLogin = () => {
-    Login("/login")
-  
-  }
+  const BackToLogin = useNavigate()
 
     const logOut = async () => {
       await magic.user.logout()
-
+      BackToLogin("/login")
     }
-
-    
-
 
 
   return (
@@ -32,10 +24,10 @@ function NavigationBar(props) {
           <Nav className="me-auto">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/contact">Contact Us</NavLink>
+            <NavLink to="/Prices">Prices</NavLink>
           </Nav>
         </Container>
         <SignIn>
-           <button onClick={navigateToLogin}>Sign In</button>
            <button onClick={logOut}>Sign Out</button>
         </SignIn>
       </Navbar>

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { ContactUsContainer, BackHome, ContentContainer, CallBox,LiveChatBox, RightContainer, LeftContentContainer, EmptyLine, SearchContainer, DownloadButton } from './ContactUs.style'
 import iconSearch  from "../../assets/search.png"
 import googleIcon from "../../assets/google-play.png"
+import Footer from '../../components/footer/Footer'
 
 
 export default function ContactUs() {
@@ -71,6 +72,7 @@ const navigate = useNavigate()
           </ContentContainer>
         </div>
       </ContactUsContainer>
+      <Footer />
     </>
   )
 }

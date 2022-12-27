@@ -26,6 +26,11 @@ export const SignIn = styled.div`
         color: black;
         transition: 0.6s;
     } 
+
+    & button:nth-of-type(2n) {
+        display: none;
+
+    } 
         
 
 `;
