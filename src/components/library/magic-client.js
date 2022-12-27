@@ -1,7 +1,7 @@
 import { Magic } from "magic-sdk";
 
  const createMagic = () => {
-const MAGIC_API = (process.env.REACT_APP_MAGIC_API)
+const MAGIC_API = String(process.env.REACT_APP_MAGIC_API)
 
     const API = `${MAGIC_API}`
 
