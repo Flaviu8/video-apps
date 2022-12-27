@@ -60,18 +60,6 @@ export default function Login() {
             
     };
 
-
-    // async function fetchData () {
-    //   const isLoggedIn = await magic.user.isLoggedIn()
-      
-    //   if(isLoggedIn ) {
-    //     return navigate("/login")
-    //   } else return navigate("/login")
-
-    //  }
-
-    //  fetchData()
-
     const paymentBtn = () => {
       navigate("/payment")
     }

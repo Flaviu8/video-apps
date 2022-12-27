@@ -19,6 +19,9 @@ function NavigationBar(props) {
 
     }
 
+
+
+
   return (
     <>
       <Navbar bg="black" variant="dark">
