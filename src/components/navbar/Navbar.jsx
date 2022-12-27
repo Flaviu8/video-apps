@@ -5,6 +5,7 @@ import "./Navbar.css"
 import { SignIn } from './Navbar.style';
 import { useNavigate } from 'react-router-dom';
 import { magic } from '../../components/library/magic-client'
+import { NavLink } from 'react-router-dom';
 
 function NavigationBar(props) {
   const Login = useNavigate()
@@ -19,17 +20,18 @@ function NavigationBar(props) {
 
     }
 
+    
 
 
 
   return (
     <>
-      <Navbar bg="black" variant="dark">
+      <Navbar bg="black" collapseOnSelect expand="lg" variant="dark">
         <Container>
           <Navbar.Brand >NETFLIX</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/contact">Contact Us</Nav.Link>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/contact">Contact Us</NavLink>
           </Nav>
         </Container>
         <SignIn>

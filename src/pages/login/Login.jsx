@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { LoginContainer, LoginInput, SignInBtn, MonthlyContainer, CardOffer, CardOffersContainer } from './Login.style'
+import { LoginContainer, LoginInput, SignInBtn, MonthlyContainer, CardOffer, CardOffersContainer, CardOffersMainContainer } from './Login.style'
 import Navbar from '../../components/navbar/Navbar'
 import { magic } from '../../components/library/magic-client'
 import { useNavigate } from 'react-router-dom';
@@ -78,7 +78,7 @@ export default function Login() {
             <button onClick={handleLoginWithEmail}> { isLoading ? "Loading..." : "Sign In"}</button>
           </SignInBtn>
       </LoginInput>
-      <div style={{display: "flex"}}>
+      <CardOffersMainContainer>
       <CardOffersContainer>
         <CardOffer>
             <h1>NETFLIX PREMIUM</h1>
@@ -139,7 +139,7 @@ export default function Login() {
             <button onClick={paymentBtn}>Subscribe</button>
         </CardOffer>
       </CardOffersContainer>
-      </div>
+      </CardOffersMainContainer>
     </LoginContainer>
   )
   }

@@ -14,10 +14,14 @@
 .navbar-nav {
     margin-left: 2em;
     font-size: 1.5em;
+    
 }
 
 .navbar-nav a {
     color: white;
+    text-decoration: none;
+    margin-left: 0.5em;
+    
 }
 
 .navbar-nav a:hover {

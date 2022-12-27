@@ -92,6 +92,13 @@ export const SignInBtn = styled.div`
 
 
 `;
+export const CardOffersMainContainer = styled.div`
+     display: flex;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
 
 
 export const CardOffersContainer = styled.div`
@@ -102,7 +109,10 @@ export const CardOffersContainer = styled.div`
       margin-top: 2em;
       border-radius: 3%;
 
-
+      @media (max-width: 768px) {
+    width: 80%;
+    height: 325px;
+  }
 `;
 
 
@@ -115,6 +125,10 @@ export const CardOffer = styled.div`
         color: white;
         margin:auto;
         padding-top: 1em;
+
+        @media (max-width: 768px) {
+            font-size: 1.5em;
+  }
       }
 
       & ul li {
@@ -122,6 +136,10 @@ export const CardOffer = styled.div`
           margin-top: 2em;
           font-weight: 600;
           font-size: 2em;
+
+          @media (max-width: 768px) {
+            font-size: 1em;
+  }
       }
           & button {
             width: 8em;
@@ -145,6 +163,8 @@ export const CardOffer = styled.div`
         transition: 0.6s;
     } 
 
+ 
+
 
 `;
 
@@ -158,6 +178,10 @@ export const MonthlyContainer = styled.div`
         font-weight: 600;
         font-size: 2em;
         color: white;
+
+        @media (max-width: 768px) {
+            font-size: 1em;
+  }
     }
 
 

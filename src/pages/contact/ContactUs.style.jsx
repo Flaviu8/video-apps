@@ -36,6 +36,11 @@ export const BackHome = styled.div`
 export const ContentContainer = styled.div` 
         padding-top: 1em;
         display: flex;
+
+        @media (max-width: 768px) {
+            display: block;
+            margin-right: 10em;
+  }
         
         & p {
             font-size: 1.1em;
@@ -50,8 +55,20 @@ export const SearchContainer = styled.div`
         height: 3.1em;
         width: 70%;
         margin-top: 1.5em;
+        @media (max-width: 768px) {
+            width: 250px;
+            display: flex;
+            justify-content: flex-start;
+            
+    
+  }
+
         & img {
             margin-left: 1em;
+            
+        @media (max-width: 768px) {
+            margin-top: 0.7em;
+  }
         }
       & input {
          border: none;
@@ -59,6 +76,13 @@ export const SearchContainer = styled.div`
          height: 2.8em;
          font-size: 1em;
          width: 80%;
+
+         @media (max-width: 768px) {
+  width: 60%;
+  display: flex;
+  }
+
+         
       }
 
       & input:focus {
@@ -72,6 +96,10 @@ export const DownloadButton = styled.div`
         display: flex;
         margin-top: 1.2em;
         margin-bottom: 2em;
+
+        @media (max-width: 768px) {
+   display: block;
+  }
        
         
         & button {
@@ -85,6 +113,10 @@ export const DownloadButton = styled.div`
             align-content: center;
             padding-right: 3em;
             margin-right: 1em;
+
+            @media (max-width: 768px) {
+                margin-bottom: 1em;
+  }
         
             
         }
@@ -106,6 +138,10 @@ export const LeftContentContainer = styled.div`
    & p {
     width: 900px;
     font-weight: 100;
+    @media (max-width: 768px) {
+  width: 150%;
+  }
+
    }
 
    & h6 {
@@ -128,6 +164,11 @@ export const LeftContentContainer = styled.div`
 export const RightContainer = styled.div` 
     width: 500px;
      margin-left: 1.5em;
+
+     @media (max-width: 768px) {
+  width: 200%;
+  margin: auto;
+  }
     & ul {
         margin-top: 1em;
         line-height: 2em;
