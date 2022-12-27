@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import { LoginContainer, LoginInput, SignInBtn, MonthlyContainer, CardOffer, CardOffersContainer, CardOffersMainContainer } from './Login.style'
-import Navbar from '../../components/navbar/Navbar'
 import { magic } from '../../components/library/magic-client'
 import { useNavigate } from 'react-router-dom';
 
@@ -67,7 +66,6 @@ export default function Login() {
 
   return (
     <LoginContainer>
-      <Navbar />
       <LoginInput>
         <h1>Sign In</h1>
       <input type= "email" placeholder="E-mail address" 
