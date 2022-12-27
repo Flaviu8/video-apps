@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { MovieCardMain, MovieCardContainer } from './MovieCard.style'
 import axios from 'axios'
-import YouTube from 'react-youtube'
+import  { useNavigate} from "react-router-dom"
+import SearchBar from '../search-bar/SearchBar'
+
 
 export default function MovieCard() {
-    
     const [movie, setMovie] = useState([])
-    // const API_KEY = process.env.MOVIE_APP_KEY
-    
-        
+    const [searchTerm, setSearchTerm] = useState("")
+    const API_KEY = String(process.env.REACT_APP_MOVIE_APP_KEY)
+    const navigate = useNavigate();
+
 
     useEffect(()=>{
-        axios.get(`https://api.themoviedb.org/3/movie/157336?api_key=7c53f0c0f44c4c0fd2a1494e24a3b86d&append_to_response=videos,images`)
+        axios.get(`https://api.themoviedb.org/3/movie/157336?api_key=${API_KEY}&append_to_response=videos,images`)
         .then(function (response) {
           // handle success
           setMovie(response.data.videos.results)
@@ -21,35 +23,52 @@ export default function MovieCard() {
           console.log(error);
         })
   
-    }, [])
-
-    console.log(movie)
+    }, [API_KEY])
 
 
+  const handleChange = (event) => {
+    event.preventDefault()
+    setSearchTerm(event.target.value)
 
+  }
+    
 
   return (
+    <>
+    <SearchBar changeValue={handleChange} valueChanged={searchTerm}/>
+    
     <div style={{
         display: "flex",
-        flexWrap: "wrap"
+        flexWrap: "wrap",
+        
+  
     }}>
-        {movie.map( movies => {
+
+        {movie.filter((movies) => {
+          if (searchTerm === "" ) {
+              return movies
+          } else if (movies.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+                  return movies
+          } else return null
+        }).map(movies => {
             return (
                 <MovieCardMain key={movies.id}>
+                  
                 <MovieCardContainer>
-                    {/* <img src="https://sales.pahousing.co.uk/media/2863/helo-tower-cgi-2-1.png?anchor=center&mode=crop&quality=75&rnd=132919217060000000" /> */}
-                    <YouTube videoId={movies.key} width='700px'
-                    />
-                    <p>{movies.type}</p>
+                  <img src="https://t4.ftcdn.net/jpg/03/48/81/77/360_F_348817789_25OWzJSmz8pbFOc8HRhxEeMpdYBPeu7X.jpg" width="640" height="350px" alt=""/>
                     <p>{movies.name}</p>
                 </MovieCardContainer>
-                <button>Play</button>
+                <button onClick={()=>(navigate(`/movie/${movies.key}`))}>Play</button>
             </MovieCardMain>
             )  
         })
         
         }
     </div>
+    </>
   )
+
+
+
 
   }

@@ -1,0 +1,30 @@
+
+
+.container span {
+    color: red;
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.container span:hover {
+    color: red;
+
+}
+
+.navbar-nav {
+    margin-left: 2em;
+    font-size: 1.5em;
+}
+
+.navbar-nav a {
+    color: white;
+}
+
+.navbar-nav a:hover {
+    color: red;
+    transition: 0.6s;
+}
+
+.container  {
+    margin-left: 4em;
+}

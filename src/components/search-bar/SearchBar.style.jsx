@@ -1,11 +1,11 @@
 import styled from "@emotion/styled"
 
 export const SearchBarMain = styled.div` 
-    width: 90%;
+    width: 100%;
     margin: auto;
     justify-content: center;
     display: flex;
-    margin-top: 1em;
+    margin-top: 2em;
     & input {
         width: 90%;
         font-size: 1em;

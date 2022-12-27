@@ -1,15 +1,20 @@
 import './App.css';
-import MovieCard from './components/movie-card/MovieCard';
-import Navbar from './components/navbar/Navbar';
-import SearchBar from './components/search-bar/SearchBar';
+import {Routes, Route} from 'react-router-dom'
+import Home from './pages/home/home';
+import Movie from './pages/movie/Movie';
+import ContactUs from './pages/contact/ContactUs';
+import Login from './pages/login/Login';
+import Payment from "./pages/payment/Payment"
 
 function App() {
   return (
-    <div>
-          <Navbar />
-          <SearchBar/>
-          <MovieCard />
-    </div>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/movie/:id" element={<Movie />} />
+            <Route path="/contact" element = {<ContactUs />} />
+            <Route path="/login" element= {<Login />} />
+            <Route path="/payment" element={<Payment />} />
+        </Routes>
   );
 }
 
