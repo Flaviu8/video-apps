@@ -10,4 +10,4 @@ const API_KEY = "pk_live_63BD2DCE060F4708"
 
 export const magic = createMagic();
 
-console.log("magic setup", magic);
+// console.log("magic setup", magic);

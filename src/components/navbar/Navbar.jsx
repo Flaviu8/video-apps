@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import "./Navbar.css"
 import { SignIn } from './Navbar.style';
 import { useNavigate } from 'react-router-dom';
+import { magic } from '../../components/library/magic-client'
 
 function NavigationBar(props) {
   const Login = useNavigate()
@@ -13,7 +14,10 @@ function NavigationBar(props) {
   
   }
 
+    const logOut = async () => {
+      await magic.user.logout()
 
+    }
 
   return (
     <>
@@ -26,7 +30,8 @@ function NavigationBar(props) {
           </Nav>
         </Container>
         <SignIn>
-           <button onClick={navigateToLogin}>Sign In{props.email}</button>
+           <button onClick={navigateToLogin}>Sign In</button>
+           <button onClick={logOut}>Sign Out</button>
         </SignIn>
       </Navbar>
     </>
