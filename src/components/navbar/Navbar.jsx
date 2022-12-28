@@ -20,12 +20,12 @@ function NavigationBar(props) {
   return (
     <>
       <Navbar bg="black" expand="lg">
-        <Container>
+        <Container >
             <Navbar.Brand className="navbar-brand" to='/'>NETFLIX</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav text-danger" />
+            <Navbar.Toggle aria-controls="basic-navbar-nav text-light" />
               <Navbar.Collapse id="basic-navbar-nav " >
-                <Nav className="me-auto">
-                    <NavLink className="nav-link active text-danger" aria-current="page" to="/">Home</NavLink>
+                <Nav className="me-auto ">
+                    <NavLink className="nav-link active text-light" aria-current="page" to="/">Home</NavLink>
                     <NavLink className="nav-link" to="/prices">Prices</NavLink>
                     <NavLink className="nav-link" to="/contact">Contact Us</NavLink>
                   </Nav>

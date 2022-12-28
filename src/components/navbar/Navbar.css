@@ -48,4 +48,8 @@
     .navbar-nav {
         margin-left: 0;
     }
+
+    .container {
+        margin-left: 5px;
+    }
 }

@@ -7,9 +7,7 @@ export const SignIn = styled.div`
     margin-right: 2em;
 
     @media (max-width: 768px) {
-           padding-left: 2em;
            margin-top: 1em;
-           border-radius: 1em;
   }
     
         & button {
@@ -27,6 +25,7 @@ export const SignIn = styled.div`
         font-weight: 800;
 
         @media (max-width: 768px) {
+            margin-left: 1.5em
            
   }
 
