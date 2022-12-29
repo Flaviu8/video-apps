@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 
 
-export const  FooterMain =  styled.div`
+export const FooterMain =  styled.div`
         display: flex;
         justify-content: center;
     & h6 {
@@ -63,7 +63,6 @@ export const  FooterCopyright =  styled.footer`
     & p {
         color: white;
         margin-top: 2em;
-        line-height: 5px;
         
 
         @media (max-width: 768px) {

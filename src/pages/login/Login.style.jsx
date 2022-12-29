@@ -7,6 +7,7 @@ export const LoginContainer = styled.div`
     background-size: cover;
     width: 100%;
     background-position: center;
+    padding-bottom: 1em;
 
 `;
 
@@ -14,6 +15,7 @@ export const LoginContainer = styled.div`
 export const LoginInput = styled.div`
         display: flex;
         flex-direction: column;
+        
 
         padding-bottom: 6rem;
         padding-top: 2rem /* 32px */;
