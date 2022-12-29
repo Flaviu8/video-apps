@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { MovieCardMain, MovieCardContainer, MovieCardMainContainer } from './MovieCard.style'
+import { MovieCardMain, MovieCardContainer, MovieCardMainContainer, SearchBarMain } from './MovieCard.style'
 import axios from 'axios'
 import  { useNavigate} from "react-router-dom"
-import SearchBar from '../search-bar/SearchBar'
+import "./MovieCard.css"
 
 
-export default function MovieCard() {
+export default function MovieCard(props) {
     const [movie, setMovie] = useState([])
     const [searchTerm, setSearchTerm] = useState("")
     const API_KEY = (process.env.REACT_APP_MOVIE_APP_KEY)
@@ -35,10 +35,10 @@ export default function MovieCard() {
 
   return (
     <>
-    <SearchBar changeValue={handleChange} valueChanged={searchTerm}/>
-    
+      <SearchBarMain >
+        <input className={ props.bgColor ? "light" : "" } type="search" placeholder="Search" onChange={handleChange} value={searchTerm}></input>
+      </SearchBarMain>
     <MovieCardMainContainer>
-
         {movie.filter((movies) => {
           if (searchTerm === "" ) {
               return movies
@@ -47,13 +47,13 @@ export default function MovieCard() {
           } else return null
         }).map(movies => {
             return (
-                <MovieCardMain key={movies.id}>
+                <MovieCardMain className={ props.bgColor ? "light" : "" } key={movies.id}>
                   
-                <MovieCardContainer>
+                <MovieCardContainer >
                   <img src="https://t4.ftcdn.net/jpg/03/48/81/77/360_F_348817789_25OWzJSmz8pbFOc8HRhxEeMpdYBPeu7X.jpg"  alt=""/>
-                    <p>{movies.name}</p>
+                    <p className={ props.bgColor ? "light" : "" } >{movies.name}</p>
                 </MovieCardContainer>
-                <button onClick={()=>(navigate(`/movie/${movies.key}`))}>Play</button>
+                <button className={ props.bgColor ? "light" : "" } onClick={()=>(navigate(`/movie/${movies.key}`))}>Play</button>
             </MovieCardMain>
             )  
         })

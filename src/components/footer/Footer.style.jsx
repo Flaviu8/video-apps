@@ -21,6 +21,11 @@ export const  FooterMain =  styled.div`
 
 `; 
 
+export const  FooterMainContainer =  styled.footer`
+        background-color: black;
+
+`; 
+
 
 export const  FooterLinks =  styled.div`
             display: flex;
@@ -54,7 +59,6 @@ export const  FooterLinks =  styled.div`
 
 export const  FooterCopyright =  styled.footer`
         display: flex;
-        margin-bottom: 2em;
         justify-content: center;
     & p {
         color: white;

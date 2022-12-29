@@ -1,3 +1,4 @@
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,9 +8,11 @@ import { SignIn } from './Navbar.style';
 import { useNavigate } from 'react-router-dom';
 import { magic } from '../../components/library/magic-client'
 import { NavLink } from 'react-router-dom';
+import ToggleSwitcher from '../toggleSwitcher/ToggleSwitcher';
 
 function NavigationBar(props) {
   const BackToLogin = useNavigate()
+ 
 
     const logOut = async () => {
       await magic.user.logout()
@@ -17,9 +20,11 @@ function NavigationBar(props) {
     }
 
 
+    
+
   return (
     <>
-      <Navbar bg="black" expand="lg">
+      <Navbar bg="dark" expand="lg">
         <Container >
             <Navbar.Brand className="navbar-brand" to='/'>NETFLIX</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav text-light" />
@@ -34,6 +39,7 @@ function NavigationBar(props) {
         <SignIn>
            <button onClick={logOut}>Sign Out</button>
         </SignIn>
+      <ToggleSwitcher onClick={props.handleBgChange} />
       </Navbar>
     </>
   );

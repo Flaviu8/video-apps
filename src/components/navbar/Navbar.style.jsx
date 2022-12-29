@@ -7,18 +7,18 @@ export const SignIn = styled.div`
     margin-right: 2em;
 
     @media (max-width: 768px) {
-           margin-top: 1em;
+           margin-bottom: 0.5em;
   }
     
         & button {
         margin-left: 3em;
         background-color: white;
-        color: red;
+        color: rgba(252, 64, 64, 0.966);
         width: 8em;
         height: 3em;
         cursor: pointer;
         border: none;
-        border-radius: 0.7em;
+        border-radius: 0.8em;
         box-shadow: 1,2,2,4 rgba(1,0,3,5);
         font-size: 0.9em;
         letter-spacing: 1px;
@@ -31,9 +31,9 @@ export const SignIn = styled.div`
 
     } 
     & button:hover {
-        background-color: #fa2323;
+        background-color: rgba(252, 64, 64, 0.966);
         color: black;
-        transition: 0.6s;
+        transition: 0.5s;
     }         
 
 `;

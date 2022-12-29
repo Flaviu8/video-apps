@@ -72,11 +72,11 @@ export const SignInBtn = styled.div`
     width: 8em;
     margin-top: 1em;
     background-color: white;
-    color: red;
+    color: rgba(252, 64, 64, 0.966);
     height: 3em;
     cursor: pointer;
     border: none;
-    border-radius: 0.7em;
+    border-radius: 0.8em;
     box-shadow: 1,2,2,4 rgba(1,0,3,5);
     font-size: 0.9em;
     letter-spacing: 1px;
@@ -84,9 +84,9 @@ export const SignInBtn = styled.div`
   } 
 
   & button:hover {
-        background-color: #fa2323;
+        background-color: rgba(252, 64, 64, 0.966);
         color: black;
-        transition: 0.6s;
+        transition: 0.5s;
     } 
 
 
@@ -146,11 +146,11 @@ export const CardOffer = styled.div`
           & a {
             width: 8em;
             background-color: white;
-            color: red;
+            color: rgba(252, 64, 64, 0.966);
             height: 3em;
             cursor: pointer;
             border: none;
-            border-radius: 0.7em;
+            border-radius: 0.8em;
             box-shadow: 1,2,2,4 rgba(1,0,3,5);
             font-size: 0.9em;
             letter-spacing: 1px;
@@ -161,16 +161,16 @@ export const CardOffer = styled.div`
             text-decoration: none;
   } 
 
-  & a:hover {
-        background-color: #fa2323;
-        color: black;
-        transition: 0.6s;
-    } 
+          & a:hover {
+                background-color: rgba(252, 64, 64, 0.966);
+                color: black;
+                transition: 0.5s;
+            } 
 
  
 
 
-`;
+      `;
 
 
 export const MonthlyContainer = styled.div`

@@ -4,6 +4,7 @@ import { ContactUsContainer, BackHome, ContentContainer, CallBox,LiveChatBox, Ri
 import iconSearch  from "../../assets/search.png"
 import googleIcon from "../../assets/google-play.png"
 import Footer from '../../components/footer/Footer'
+import { color } from '@mui/system'
 
 
 export default function ContactUs() {
@@ -15,11 +16,11 @@ const navigate = useNavigate()
   }
 
   return (
-    <>
+    <div style={{backgroundColor:"#fff9f9", color: "rgba(19, 17, 17, 0.966)"}}>
       <ContactUsContainer>
         <ContactUsMainContainer>
           <BackHome>
-            <p onClick={backHome}><span>&#8592;</span> Back To Home Page</p>
+            <p onClick={backHome}> Back To Home Page</p>
             <h1>Contact Customer Service</h1>
           </BackHome>
           <ContentContainer>
@@ -73,6 +74,6 @@ const navigate = useNavigate()
         </ContactUsMainContainer>
       </ContactUsContainer>
       <Footer />
-    </>
+    </div>
   )
 }

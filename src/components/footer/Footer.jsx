@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {  FooterMain, FooterLinks, FooterCopyright } from './Footer.style'
+import {  FooterMain, FooterLinks, FooterCopyright, FooterMainContainer } from './Footer.style'
 
 export default function Footer() {
   return (
-    <footer>
+    <FooterMainContainer>
         <FooterMain>
             <h6>Questions? Call 0808 196 5391</h6> 
         </FooterMain>
@@ -36,6 +36,6 @@ export default function Footer() {
         <FooterCopyright>
             <p>&#169;. 2023 NETFLIX.Inc</p >
         </FooterCopyright>
-    </footer>
+    </FooterMainContainer>
   )
 }

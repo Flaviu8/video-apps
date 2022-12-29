@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import YouTube from 'react-youtube'
-import { MainContainerMovie, DescriptionContainer,MovieCards } from './MovieContainer.style'
+import { MainContainerMovie, DescriptionContainer,MovieCards, BackHome  } from './MovieContainer.style'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import likeIcon from "../../assets/like.png"
 import dislikeIcon from "../../assets/thumb-down.png"
+import { useNavigate } from 'react-router-dom'
+import { height } from '@mui/system'
 
 export default function MovieContainer() {
   const { id } = useParams()
@@ -12,6 +14,7 @@ export default function MovieContainer() {
   const [movie, setMovie] = useState([])
   const [description, setDescription] = useState([])
   const API_KEY = (process.env.REACT_APP_MOVIE_APP_KEY)
+  const navigate = useNavigate()
   
   useEffect(()=>{
     axios.get(`https://api.themoviedb.org/3/movie/157336?api_key=7c53f0c0f44c4c0fd2a1494e24a3b86d&append_to_response=videos,images`)
@@ -64,26 +67,33 @@ useEffect(() => {
 }, []);
 
 
-
+  const backHome = () => {
+    navigate("/")
+  }
 
   return (
-    <MovieCards>
-      {movie.filter(movies => movies.key === id).map((movies) => {
+    <div style={{backgroundColor: "rgba(19, 17, 17, 0.966)", height: "961px"}}>
+        <BackHome>
+          <p onClick={backHome}>Back To Home Page</p>
+        </BackHome>
+        <MovieCards>
+          {movie.filter(movies => movies.key === id).map((movies) => {
 
-        return (
-          <MainContainerMovie key={id}>
-          <YouTube videoId={id} width= "700px" height= "600px"/>
-          <h4>{movies.published_at}</h4>
-          <h5>{movies.name}</h5>
-          <div style={{display: "flex",
-                       alignItems: "center",
-                        marginTop: "1em"   }}>
-          <button onClick={likeButton}><img src={likeIcon} width="40px" height="30px" alt='icon'/></button>
-          <button onClick={dislikeButton}><img src={dislikeIcon} width="40px" height="30px" alt='icon'/></button>
-          <input value={like} readOnly></input>
+            return (
+              <MainContainerMovie key={id}>
+              <YouTube videoId={id} width= "700px" height= "600px"/>
+              <h4>{movies.published_at}</h4>
+              <h5>{movies.name}</h5>
+              <div style={{display: "flex",
+                          alignItems: "center",
+                          marginTop: "1em"   }}>
+              <button onClick={likeButton}><img src={likeIcon} width="40px" height="30px" alt='icon'/></button>
+              <button onClick={dislikeButton}><img src={dislikeIcon} width="40px" height="30px" alt='icon'/></button>
+              <input value={like} readOnly></input>
 
-          </div>
-        </MainContainerMovie>
+              </div>
+            </MainContainerMovie>
+           
         )
       })}
 
@@ -91,11 +101,12 @@ useEffect(() => {
           return (
             <DescriptionContainer key={descriptions.id}>
             <h1>Description: </h1>
-            <p>{descriptions.body}</p>
+            <p> {descriptions.body}</p>
           </DescriptionContainer>
           )
 
       })}
     </MovieCards>
+  </div>   
   )
 }
