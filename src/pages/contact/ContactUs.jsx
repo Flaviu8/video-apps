@@ -4,7 +4,6 @@ import { ContactUsContainer, BackHome, ContentContainer, CallBox,LiveChatBox, Ri
 import iconSearch  from "../../assets/search.png"
 import googleIcon from "../../assets/google-play.png"
 import Footer from '../../components/footer/Footer'
-import { color } from '@mui/system'
 
 
 export default function ContactUs() {

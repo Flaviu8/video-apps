@@ -6,7 +6,6 @@ import { useParams } from 'react-router-dom'
 import likeIcon from "../../assets/like.png"
 import dislikeIcon from "../../assets/thumb-down.png"
 import { useNavigate } from 'react-router-dom'
-import { height } from '@mui/system'
 
 export default function MovieContainer() {
   const { id } = useParams()
