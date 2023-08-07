@@ -105,7 +105,6 @@ useEffect(() => {
             <DescriptionContainer key={descriptions.id}>
             <h1>Description: </h1>
             <p> {descriptions.body}</p>
-            {API_KEY}
           </DescriptionContainer>
           )
 
