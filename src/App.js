@@ -8,7 +8,6 @@ import Payment from "./pages/payment/Payment"
 
 function App() {
   return (
-
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/movie/:id" element={<Movie />} />

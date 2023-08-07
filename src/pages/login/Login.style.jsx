@@ -7,15 +7,14 @@ export const LoginContainer = styled.div`
     background-size: cover;
     width: 100%;
     background-position: center;
-    padding-bottom: 1em;
-
+    padding-bottom: 5em;
 `;
 
 
 export const LoginInput = styled.div`
         display: flex;
         flex-direction: column;
-        
+        align-items:center;
 
         padding-bottom: 6rem;
         padding-top: 2rem /* 32px */;
@@ -33,11 +32,11 @@ export const LoginInput = styled.div`
     color: white;
     font-weight: 700;
     font-size: 3rem;
-    margin-bottom: 2rem /* 32px */;
+    margin-bottom: 0.5em;
+    
   }
 
   & input {
-    width: 20%;
     margin: auto;
     padding-top: 0.5rem /* 8px */;
      padding-bottom: 0.5rem /* 8px */;
@@ -71,8 +70,7 @@ export const SignInBtn = styled.div`
    
     
     & button {
-    width: 8em;
-    margin-top: 1em;
+    width: 150px;
     background-color: white;
     color: rgba(252, 64, 64, 0.966);
     height: 3em;

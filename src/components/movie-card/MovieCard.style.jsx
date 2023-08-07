@@ -16,7 +16,7 @@ export const SearchBarMain = styled.section`
         padding-left: 2em;
         border-radius: 0.8em;
         background-color: #fff9f9;
-        color: #fff9f9;
+        color: rgba(19, 17, 17, 0.966);
     }
 
     & input:focus {

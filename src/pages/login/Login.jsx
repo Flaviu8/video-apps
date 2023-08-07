@@ -1,8 +1,10 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { LoginContainer, LoginInput, SignInBtn, MonthlyContainer, CardOffer, CardOffersContainer, CardOffersMainContainer } from './Login.style'
 import { magic } from '../../components/library/magic-client'
 import { useNavigate } from 'react-router-dom';
 import Footer from '../../components/footer/Footer';
+import './spinner.css'
+
 
 
 
@@ -11,7 +13,14 @@ export default function Login() {
   const [userMsg, setUserMsg] = useState("");
   const [isLoading, setIsLoading] = useState(false)
   const navigate = useNavigate()
-  // const [isLoggedIn, setIsLoggedIn] = useState(true)
+  const [loading, setLoading] = useState(false);
+  
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
 
 
   const handleOnChangeEmail = (e) => { 
@@ -60,23 +69,27 @@ export default function Login() {
             
     };
 
-    // const paymentBtn = () => {
-    //   navigate("/payment")
-    // }
-
-
   return (
     <>
-    <LoginContainer>
-      <LoginInput>
+    {
+      loading ? (
+        <div className='main_spinner'>
+             <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+        </div>
+      ) :
+      <>
+      <LoginContainer>
+      <LoginInput > 
+        <form style={{paddingBottom: "5em"}} onSubmit="submit">
         <h1>Sign In</h1>
-      <input type= "email" placeholder="E-mail address" 
-          onChange={handleOnChangeEmail}
-          />
-          <SignInBtn>
-             <p style={{color:"white"}}>{userMsg}</p>
-            <button onClick={handleLoginWithEmail}> { isLoading ? "Loading..." : "Sign In"}</button>
-          </SignInBtn>
+          <input onSubmit="submit" type= "email" placeholder="E-mail address" 
+            onChange={handleOnChangeEmail}
+            />
+            <p style={{color:"white", marginTop: "12px"}}>{userMsg}</p>
+            <SignInBtn>
+              <button  onClick={handleLoginWithEmail}> { isLoading ? "Loading..." : "Sign In"}</button>
+            </SignInBtn>
+        </form>
       </LoginInput>
       <CardOffersMainContainer>
       <CardOffersContainer>
@@ -142,6 +155,8 @@ export default function Login() {
       </CardOffersMainContainer>
     </LoginContainer>
     <Footer />
+    </> 
+    }
     </>
   )
   }

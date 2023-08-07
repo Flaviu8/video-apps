@@ -12,11 +12,11 @@ export default function MovieContainer() {
   let [like, setLike] = useState(localStorage.getItem(0)) 
   const [movie, setMovie] = useState([])
   const [description, setDescription] = useState([])
-  const API_KEY = (process.env.REACT_APP_MOVIE_APP_KEY)
+  const API_KEY = process.env.REACT_APP_MOVIE_APP_KEY
   const navigate = useNavigate()
   
   useEffect(()=>{
-    axios.get(`https://api.themoviedb.org/3/movie/157336?api_key=7c53f0c0f44c4c0fd2a1494e24a3b86d&append_to_response=videos,images`)
+    axios.get(`https://api.themoviedb.org/3/movie/157336?api_key=${API_KEY}&append_to_response=videos,images`)
     .then(function (response) {
       // handle success
       setMovie(response.data.videos.results)
@@ -27,6 +27,9 @@ export default function MovieContainer() {
     })
 
 }, [API_KEY])
+
+
+console.log(movie)
 
 
 useEffect(()=>{
@@ -71,6 +74,7 @@ useEffect(() => {
   }
 
   return (
+
     <div style={{backgroundColor: "rgba(19, 17, 17, 0.966)", height: "961px"}}>
         <BackHome>
           <p onClick={backHome}>Back To Home Page</p>
@@ -101,6 +105,7 @@ useEffect(() => {
             <DescriptionContainer key={descriptions.id}>
             <h1>Description: </h1>
             <p> {descriptions.body}</p>
+            {API_KEY}
           </DescriptionContainer>
           )
 

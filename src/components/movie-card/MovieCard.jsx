@@ -5,15 +5,17 @@ import  { useNavigate} from "react-router-dom"
 import "./MovieCard.css"
 
 
+
 export default function MovieCard(props) {
     const [movie, setMovie] = useState([])
     const [searchTerm, setSearchTerm] = useState("")
-    const API_KEY = (process.env.REACT_APP_MOVIE_APP_KEY)
+    const API_KEY = process.env.REACT_APP_MOVIE_APP_KEY
     const navigate = useNavigate();
+    
 
 
     useEffect(()=>{
-        axios.get(`https://api.themoviedb.org/3/movie/157336?api_key=7c53f0c0f44c4c0fd2a1494e24a3b86d&append_to_response=videos,images`)
+        axios.get(`https://api.themoviedb.org/3/movie/157336?api_key=${API_KEY}&append_to_response=videos,images`)
         .then(function (response) {
           // handle success
           setMovie(response.data.videos.results)
@@ -25,6 +27,7 @@ export default function MovieCard(props) {
   
     }, [API_KEY])
 
+    console.log(movie)
 
   const handleChange = (event) => {
     event.preventDefault()
@@ -48,7 +51,6 @@ export default function MovieCard(props) {
         }).map(movies => {
             return (
                 <MovieCardMain className={ props.bgColor ? "light" : "" } key={movies.id}>
-                  
                 <MovieCardContainer >
                   <img src="https://t4.ftcdn.net/jpg/03/48/81/77/360_F_348817789_25OWzJSmz8pbFOc8HRhxEeMpdYBPeu7X.jpg"  alt=""/>
                     <p className={ props.bgColor ? "light" : "" } >{movies.name}</p>
@@ -62,8 +64,4 @@ export default function MovieCard(props) {
     </MovieCardMainContainer>
     </>
   )
-
-
-
-
   }
